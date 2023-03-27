@@ -18,7 +18,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[a0,landscape]{a0poster}
+\documentclass[a0, portrait]{a0poster}
 
 \usepackage{multicol} % This is so we can have multiple columns of text side-by-side
 \columnsep=100pt % This is the amount of white space between the columns in the poster
@@ -41,6 +41,12 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage[fontsize=27.6pt]{fontsize}
+
+
+
+% Shaded blocks.
+\usepackage{framed,xcolor}
+\colorlet{shadecolor}{orange!15}
 
 \newcommand{\BibTeX}{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em\TeX}
 
@@ -75,7 +81,7 @@
 
 %----------------------------------------------------------------------------------------
 
-\begin{multicols}{4} % This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
+\begin{multicols}{3} % This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
 
 %----------------------------------------------------------------------------------------
 %	ABSTRACT
@@ -89,7 +95,9 @@
 
 % \color{SaddleBrown} % SaddleBrown color for the introduction
 
-\section*{Introduction}
+In this paper, we propose \SAM, a Monte-Carlo Tree Search (MCTS)-based solver for intention progression problem with both achievement and maintenance goals. We evaluate the performance of our approach in a range of benchmark scenarios with increasing difficulty. The results suggest that \SAM significantly improves the performance of agents with maintenance goals.
+
+
 One of the key advantages of Belief-Desire-Intention (BDI) agents \cite{Rao/Georgeff:92a} is their ability to pursue multiple goals in parallel.
 %
 When multiple goals are pursued at the same time,  an agent has to decide which of its intentions should be progressed, and if the next step of the selected intention is a subgoal, the agent also has to decide which plan should be used. These two choices together form the \textit{intention progression problem} \cite{Logan//:17a}.
